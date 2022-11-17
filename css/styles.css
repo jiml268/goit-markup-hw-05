@@ -8,7 +8,9 @@
     --white-text-color: #ffffff;
     --secondary-background: #F5F4FA;
     --border-color:#ECECEC;
-    --footer-contact-color: rgba(255, 255, 255, 0.6)
+    --footer-contact-color: rgba(255, 255, 255, 0.6);
+    --timer: 250ms;
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       }
 
 
@@ -742,8 +744,8 @@ margin-right: auto;
    visibility: visible;
    opacity: 1;
    background-color: rgba(0,0,0 0.2);
-   transition: opacity 5s;
-   visibility: visible  
+   transition: opacity var(--timer) var(--timing-function);
+   visibility: var(--timer) var(--timing-function);
   }
 
   .is-hidden{
@@ -756,9 +758,10 @@ margin-right: auto;
     position: absolute;
     width: 528px;
     min-height: 581px;
-    background-color: white;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+    background: #ffffff;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 4px;
+    
     top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
